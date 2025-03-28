@@ -11,7 +11,7 @@ O objetivo desta aplicação é:
 *Reduzir barreiras de comunicação e agilizar processos comerciais.
 
 # Funcionalidades Principais
-# *Páginas Públicas:
+# Páginas Públicas:
 
 *Home: Visão geral da empresa e banner de destaque.
 
