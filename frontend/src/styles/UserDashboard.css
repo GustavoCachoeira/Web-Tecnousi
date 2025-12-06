@@ -1,0 +1,45 @@
+.user-dashboard {
+  padding: 2rem 0;
+}
+
+.quotes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.quote-item {
+  background: #f0f4f8;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.quote-item h3 {
+  color: #0047AB;
+  margin-bottom: 0.5rem;
+}
+
+.quote-item p {
+  margin: 0.5rem 0;
+}
+
+.quote-item ul {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.quote-item ul li a {
+  color: #0047AB;
+  text-decoration: underline;
+}
+
+.quote-item ul li a:hover {
+  color: #003087;
+}
+
+@media (max-width: 768px) {
+  .quotes-list {
+    gap: 1rem;
+  }
+}

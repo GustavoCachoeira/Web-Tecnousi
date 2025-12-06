@@ -1,0 +1,53 @@
+.quote {
+  padding: 2rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quote form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  min-height: 100px;
+}
+
+.form-group span {
+  color: red;
+  font-size: 0.9rem;
+}
+
+button {
+  background: #0047AB;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #003087;
+}
+
+@media (max-width: 768px) {
+  .quote {
+    max-width: 100%;
+  }
+}

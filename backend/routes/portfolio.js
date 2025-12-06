@@ -1,13 +1,11 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const { authMiddleware, adminMiddleware } = require('../middlewares/auth');
-const upload = require('../config/multer');
+const { upload, handleMulterError } = require('../config/multer'); // Desestruturar aqui
 
 const router = express.Router();
 const prisma = new PrismaClient();
 
-// Criar item de portfólio (admin)
-const { upload, handleMulterError } = require('../config/multer');
 router.post('/', authMiddleware, adminMiddleware, upload.single('image'), handleMulterError, async (req, res) => {
   try {
     const { title, description } = req.body;

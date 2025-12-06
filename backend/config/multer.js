@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage,
-  limits: { fileSize: 5 * 1024 * 1024 },
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
   fileFilter: (req, file, cb) => {
     const filetypes = /jpeg|jpg|png|pdf/;
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
@@ -25,12 +25,13 @@ const upload = multer({
   },
 });
 
-// Middleware para erros do Multer
 const handleMulterError = (err, req, res, next) => {
   if (err instanceof multer.MulterError) {
+    console.error('Erro Multer:', err.message);
     return res.status(400).json({ error: `Erro de upload: ${err.message}` });
   }
   if (err) {
+    console.error('Erro de validação:', err.message);
     return res.status(400).json({ error: err.message });
   }
   next();

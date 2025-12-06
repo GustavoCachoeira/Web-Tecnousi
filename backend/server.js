@@ -26,11 +26,6 @@ app.use('/api/quotes', quoteRoutes);
 app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/contact', contactRoutes);
 
-app.use((req, res, next) => {
-  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
-  next();
-});
-
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Erro interno do servidor' });
